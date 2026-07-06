@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Devansh Electronics | TV Repair Service</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+DEVANSH <span>ELECTRONICS</span>
+</div>
+
+<nav id="menu">
+<a href="#" onclick="toggleMenu()">Home</a>
+<a href="#services" onclick="toggleMenu()">Services</a>
+<a href="#gallery" onclick="toggleMenu()">Gallery</a>
+<a href="#contact" onclick="toggleMenu()">Contact</a>
+</nav>
+<div class="menu-btn" onclick="toggleMenu()">
+☰
+</div>
+</header>
+
+<section class="hero">
+
+<div class="overlay">
+
+<h1>ANY TV, ANY PROBLEM<br>WE FIX IT!</h1>
+
+<p>LED TV • Smart TV • OLED TV • Soundbar • Home Theatre Repair</p>
+
+<div class="rating">
+⭐⭐⭐⭐⭐ Google Rated TV Repair Service
+</div>
+
+<a href="tel:7972951044" class="callbtn">
+📞 Call Now
+</a>
+
+<a href="https://wa.me/917972951044?text=Hello%20Devansh%20Electronics,%20I%20need%20TV%20repair." class="wabtn">
+💬 WhatsApp
+</a>
+
+</div>
+
+</section>
+
+<section id="services">
+
+<h2>Our Services</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>📺📺 LED TV Repair</h3>
+<p>Professional LED TV repair.</p>
+</div>
+
+<div class="card">
+<h3>📡 Smart TV Repair</h3>
+<p>Android & Google TV experts.</p>
+</div>
+
+<div class="card">
+<h3>🖥️ OLED TV Repair</h3>
+<p>Advanced OLED repair service.</p>
+</div>
+
+<div class="card">
+<h3>💡 Backlight Repair</h3>
+<p>No Display & Dim Screen.</p>
+</div>
+
+</div>
+
+</section>
+<section id="about">
+
+<h2>About Devansh Electronics</h2>
+
+<img src="images/owner.jpg" class="owner">
+
+<h3>Ganesh Pathak</h3>
+
+<p>
+
+Professional TV Repair Engineer with experience in
+LED TV, Smart TV, OLED TV, Soundbar,
+Motherboard & Backlight Repair.
+
+Doorstep Service Available in
+Vasai, Nalasopara & Virar.
+
+</p>
+
+</section><section id="gallery">
+
+<h2>Our Work Gallery</h2>
+
+<div class="gallery">
+
+<img src="images/work1.jpg" alt="TV Repair">
+<img src="images/work2.jpg" alt="TV Repair">
+<img src="images/work3.jpg" alt="TV Repair">
+<img src="images/work4.jpg" alt="TV Repair">
+
+</div>
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="">
+</div>
+</section>
+
+<a href="https://wa.me/917972951044" class="float-whatsapp" target="_blank">
+💬
+</a>
+
+<section id="contact">
+<h2>Contact Us</h2>
+
+<p>📍 B Wing 205, Swiss Point,<br>
+KT Wadi, Vasai West,<br>
+Maharashtra - 401202</p>
+
+<p>📞 <a href="tel:+917972951044">7972951044</a></p>
+
+<p>
+<a href="https://maps.app.goo.gl/fRAvV7SoATRFP8Py7?g_st=ac" target="_blank">
+📍 Open Google Maps
+</a>
+</p>
+
+</section>
+<script>
+function toggleMenu(){
+    document.getElementById("menu").classList.toggle("show");
+}
+
+document.addEventListener("click", function(e){
+    const menu = document.getElementById("menu");
+    const btn = document.querySelector(".menu-btn");
+
+    if (!menu.contains(e.target) && !btn.contains(e.target)) {
+        menu.classList.remove("show");
+    }
+});
+
+const images=document.querySelectorAll(".gallery img");
+const lightbox=document.getElementById("lightbox");
+const lightboxImg=document.getElementById("lightbox-img");
+
+images.forEach(img=>{
+img.onclick=function(){
+lightbox.style.display="flex";
+lightboxImg.src=this.src;
+}
+});
+
+function closeLightbox(){
+lightbox.style.display="none";
+}
+</script>
+
+</body>
+</html>
